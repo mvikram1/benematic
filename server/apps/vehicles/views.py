@@ -7,7 +7,7 @@ from .models import *
 from .serializers import *
 
 
-class Vehicle(viewsets.ModelViewSet):
+class VehicleViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """

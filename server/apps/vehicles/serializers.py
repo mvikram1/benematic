@@ -3,8 +3,7 @@ from .models import *
 
 class VehicleSerializer(serializers.HyperlinkedModelSerializer):
     class Vehicle:
-        model = User
-        # exclude = ('is_active', 'is_staff', 'is_superuser',)
+        model = Vehicle
         fields = ('vin',)
         read_only_fields = ('id',)
 

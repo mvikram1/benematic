@@ -36,8 +36,3 @@ urlpatterns = [
     url(r'^api/', include(router.urls)),
 ]
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns

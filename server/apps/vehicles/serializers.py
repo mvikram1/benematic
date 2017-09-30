@@ -5,13 +5,13 @@ class VehicleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Vehicle
         fields = ('vin',)
-        read_only_fields = ('id',)
+        # read_only_fields = ('id',)
 
 
 class VehicleSessionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = VehicleSession
-        fields = ('vehicle_id', 'created_at', 'modified_at',)
+        fields = ('id', 'vehicle_id', 'started_at', 'ended_at',)
 
 
 class VehicleSessionMetricSerializer(serializers.HyperlinkedModelSerializer):

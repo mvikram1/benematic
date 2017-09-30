@@ -14,6 +14,7 @@ router = routers.DefaultRouter()
 router.register(r'vehicle', VehicleViewSet)
 router.register(r'session', VehicleSessionViewSet)
 router.register(r'metric', VehicleSessionMetricViewSet)
+router.register(r'excess', ExcessMetricViewSet)
 router.register(r'states', StateViewSet)
 
 urlpatterns = [

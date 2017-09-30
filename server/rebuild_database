@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo rm db.sqlite3
+sudo find . -type f -name '000*.py' -exec rm {} +
+sudo python3.5 manage.py makemigrations
+sudo python3.5 manage.py migrate
+sudo python3.5 manage.py loaddata apps/users/fixtures/gender.json
+sudo python3.5 manage.py loaddata apps/users/fixtures/sexuality.json
+sudo python3.5 manage.py loaddata apps/users/fixtures/relationship.json
+sudo python3.5 manage.py loaddata apps/users/fixtures/seeking.json
+sudo python3.5 manage.py loaddata apps/locations/fixtures/state.json
+sudo python3.5 manage.py loaddata apps/locations/fixtures/zipcode.json

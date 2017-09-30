@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{#{% load render_bundle from webpack_loader %}#}
+{% load static %}
+<html>
+<head>
+    <title>{% block title %}{% endblock %} | GM</title>
+</head>
+<body>
+    <div id="root">
+    {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

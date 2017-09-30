@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>{{state.name}}</h1>
+                <ul>
+                {% for zip in state.zipcode_set.all %}
+                    <li><a href="{{zip.code | upper}}/">{{ zip.code }} - {{ zip.city }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

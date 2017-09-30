@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import *
 
 class VehicleSerializer(serializers.HyperlinkedModelSerializer):
-    class Vehicle:
+    class Meta:
         model = Vehicle
         fields = ('vin',)
         read_only_fields = ('id',)
@@ -11,12 +11,12 @@ class VehicleSerializer(serializers.HyperlinkedModelSerializer):
 class VehicleSessionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = VehicleSession
-        fields = ('vehicle', 'created_at', 'modified_at',)
+        fields = ('vehicle_id', 'created_at', 'modified_at',)
 
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class VehicleSessionMetricSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = VehicleSessionMetric
-        fields = ('vehicle_session', 'metric', 'value',)
+        fields = ('vehicle_session_id', 'metric', 'value',)
 
 
